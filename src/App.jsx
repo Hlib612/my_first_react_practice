@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-// import User from './User.jsx'
+import User from './User.jsx'
 
 // const favouriteBooks = [
 //   { id: "id-1", name: "JS for beginners" },
@@ -17,6 +17,7 @@ import "./App.css";
 //   { id: "id-3", name: "gray" },
 // ];
 
+  // 2 lesson
 // const userData = {
 //   name: "Hlib",
 //   age: 16,
@@ -56,6 +57,7 @@ import "./App.css";
 //     </>
 //   );
 // }
+  // 2 lesson.
 
 // function Task(temperature) {
 //   return (
@@ -95,38 +97,16 @@ import "./App.css";
 //   );
 // }
 
-// export default App;
-
-
-const UserProfile = ({data}) => {
-  return(
-    <>
-    <p>{data.name}</p>
-    <p>{data.experience}</p>
-    <p>{data.email}</p>
-    <p>{data.position}</p>
-    </>
-  )
-}
 
 const App = () => {
-  const developer = {
-    name: "Олексій Петренко",
-    email: "oleksii@example.com",
-    position: "Senior React Developer",
-    experience: "5 років"
-  };
-
-  const designer = {
-    name: "Марія Іванова",
-    email: "maria@design.com",
-    position: "UI/UX Designer",
-    experience: "3 роки"
-  };
+const client = {
+  names: ["Hlib", "Super", "Well, well, well"],
+  age: "16",
+  city: "Kyiv"
+}
   return(
     <>
-    <UserProfile data={developer}/>
-    <UserProfile data={designer}/>
+<User names={client.names} age={client.age} city={client.city}><p>Привіт</p></User>
     </>
   )
 }
